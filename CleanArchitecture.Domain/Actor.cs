@@ -8,7 +8,7 @@ namespace CleanArchitecture.Domain
 
         public Actor() { 
             Videos = new HashSet<Video>();
-        }
+        } 
 
         public string? Nombre { get; set; } 
 
