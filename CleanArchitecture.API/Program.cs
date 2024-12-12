@@ -1,3 +1,6 @@
+using CleanArchitecture.Application;
+using CleanArchitecture.Infrastructure;
+
 namespace CleanArchitecture.API
 {
     public class Program
@@ -12,6 +15,9 @@ namespace CleanArchitecture.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddInfrastructureServices(builder.Configuration);
+            builder.Services.AddApplicationServices();
 
             var app = builder.Build();
 
